@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - C:\Users\thisi\OneDrive\Desktop\oracle-ai-migrate-gcp-main:/app
+    
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      # Add any other Supabase env vars you use
+    restart: unless-stopped
+    env_file:
+      - .env
+    command: npm run dev

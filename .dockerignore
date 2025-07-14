@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yaml
+.git
+.gitignore
+.env
+dist    # Remove this if you build locally and want it in container
